@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
     <None Update="App_Data\Car.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

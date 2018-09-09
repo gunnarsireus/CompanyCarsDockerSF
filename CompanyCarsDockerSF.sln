@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarApi", "CarApi\CarApi.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarClient", "CarClient\CarClient.csproj", "{3A13B4DA-936B-4C2A-AD76-0EB969BD32E9}"
 EndProject
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "CompanyCarsDockerSFApplication", "CompanyCarsDockerSFApplication\CompanyCarsDockerSFApplication.sfproj", "{BB5FFF4C-FA25-45EB-B636-83DB65558286}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{3A13B4DA-936B-4C2A-AD76-0EB969BD32E9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3A13B4DA-936B-4C2A-AD76-0EB969BD32E9}.Release|x64.ActiveCfg = Release|Any CPU
 		{3A13B4DA-936B-4C2A-AD76-0EB969BD32E9}.Release|x64.Build.0 = Release|Any CPU
+		{BB5FFF4C-FA25-45EB-B636-83DB65558286}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{BB5FFF4C-FA25-45EB-B636-83DB65558286}.Debug|x64.ActiveCfg = Debug|x64
+		{BB5FFF4C-FA25-45EB-B636-83DB65558286}.Debug|x64.Build.0 = Debug|x64
+		{BB5FFF4C-FA25-45EB-B636-83DB65558286}.Debug|x64.Deploy.0 = Debug|x64
+		{BB5FFF4C-FA25-45EB-B636-83DB65558286}.Release|Any CPU.ActiveCfg = Release|x64
+		{BB5FFF4C-FA25-45EB-B636-83DB65558286}.Release|x64.ActiveCfg = Release|x64
+		{BB5FFF4C-FA25-45EB-B636-83DB65558286}.Release|x64.Build.0 = Release|x64
+		{BB5FFF4C-FA25-45EB-B636-83DB65558286}.Release|x64.Deploy.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
