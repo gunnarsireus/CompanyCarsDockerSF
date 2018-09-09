@@ -24,11 +24,6 @@
         "CarApiUrl": "http://localhost:64411/"
       },
       "applicationUrl": "http://localhost:50416/"
-    },
-    "Docker": {
-      "commandName": "Docker",
-      "launchBrowser": true,
-      "launchUrl": "{Scheme}://localhost:{ServicePort}"
     }
   }
 }
