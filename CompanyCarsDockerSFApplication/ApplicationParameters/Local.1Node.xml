@@ -5,7 +5,7 @@
     <Parameter Name="CarApi_Isolation" Value="default" />
     <Parameter Name="CarClient_InstanceCount" Value="1" />
     <Parameter Name="CarClient_Isolation" Value="default" />
-    <Parameter Name="CarClient_CarApiUrlReverseProxy" Value="http://localhost:19081/CompanyCarsDockerSF/CarApi/" />
+    <Parameter Name="CarClient_CarApiUrlReverseProxy" Value="http://localhost:19081/CompanyCarsDockerSFApplication/CarApi/" />
     <Parameter Name="CarClient_CarApiUrlForJavascript" Value="http://localhost:64411/" />
   </Parameters>
 </Application>
