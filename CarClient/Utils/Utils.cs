@@ -12,8 +12,12 @@ namespace CarClient
         private static readonly Uri Endpoint = new Uri(Environment.GetEnvironmentVariable("CarApiUrlReverseProxy").Replace("localhost",fqdn));
 		public static async Task<T> Get<T>(string url)
 		{
-            using (var client = new HttpClient { BaseAddress = Endpoint })
-			{
+            HttpClientHandler handler = new HttpClientHandler()
+            {
+                ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+            };
+            using (var client = new HttpClient(handler) { BaseAddress = Endpoint })
+            {
 				client.DefaultRequestHeaders.Accept.Clear();
 				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 				var response = await client.GetAsync(url);
@@ -25,8 +29,12 @@ namespace CarClient
 		// INSERT
 		public static async Task<T> Post<T>(string url, object data)
 		{
-			using (var client = new HttpClient { BaseAddress = Endpoint })
-			{
+            HttpClientHandler handler = new HttpClientHandler()
+            {
+                ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+            };
+            using (var client = new HttpClient(handler) { BaseAddress = Endpoint })
+            {
 				client.DefaultRequestHeaders.Accept.Clear();
 				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 				var httpContent = new StringContent(JsonConvert.SerializeObject(data));
@@ -41,7 +49,11 @@ namespace CarClient
 		// UPDATE
 		public static async Task<T> Put<T>(string url, object data)
 		{
-			using (var client = new HttpClient { BaseAddress = Endpoint })
+            HttpClientHandler handler = new HttpClientHandler()
+            {
+                ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+            };
+            using (var client = new HttpClient(handler) { BaseAddress = Endpoint })
 			{
 				client.DefaultRequestHeaders.Accept.Clear();
 				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -58,8 +70,12 @@ namespace CarClient
 
 		public static async Task<T> Delete<T>(string url)
 		{
-			using (var client = new HttpClient { BaseAddress = Endpoint })
-			{
+            HttpClientHandler handler = new HttpClientHandler()
+            {
+                ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+            };
+            using (var client = new HttpClient(handler) { BaseAddress = Endpoint })
+            {
 				client.DefaultRequestHeaders.Accept.Clear();
 				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 				var response = await client.DeleteAsync(url);
