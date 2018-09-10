@@ -8,7 +8,8 @@ namespace CarClient
 {
 	public static class Utils
 	{
-        private static readonly Uri Endpoint = new Uri(Environment.GetEnvironmentVariable("CarApiUrl"));
+        private static readonly string fqdn = Environment.GetEnvironmentVariable("Fabric_NodeIPOrFQDN");
+        private static readonly Uri Endpoint = new Uri(Environment.GetEnvironmentVariable("CarApiUrlReverseProxy").Replace("localhost",fqdn));
 		public static async Task<T> Get<T>(string url)
 		{
             using (var client = new HttpClient { BaseAddress = Endpoint })

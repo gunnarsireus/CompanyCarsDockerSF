@@ -13,7 +13,8 @@ namespace CarClient.Controllers
 	{
 		public async Task<IActionResult> Index()
 		{
-			List<Company> companies;
+            ViewBag.CarApiUrlForJavascript = Environment.GetEnvironmentVariable("CarApiUrlForJavascript");
+            List<Company> companies;
 			try
 			{
 				companies = await Utils.Get<List<Company>>("api/Company");

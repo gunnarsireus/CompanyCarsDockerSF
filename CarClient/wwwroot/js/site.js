@@ -1,6 +1,11 @@
 ﻿// Write your JavaScript code.
 $(document).ready(function () {
-    timerJob();
+    if (document.getElementById("carApiUrlForJavascript") !== null) {
+        if (localStorage.getItem("carApiUrlForJavascript") === null || localStorage.getItem("carApiUrlForJavascript" !== document.getElementById("carApiUrlForJavascript").innerHTML)) {
+            localStorage.setItem("carApiUrlForJavascript", document.getElementById("carApiUrlForJavascript").innerHTML);
+        }
+        timerJob();
+    }
     console.log('documentReady');
 });
 
@@ -17,7 +22,7 @@ function timerJob() {
     const tenSeconds = 10000;
     const oneSecond = 1000;
     $.ajax({
-        url: "http://localhost:64411/api/car",
+        url: localStorage.getItem("carApiUrlForJavascript") + "api/car",
         type: "GET",
         dataType: "json",
         success: function (cars) {
@@ -34,7 +39,7 @@ function timerJob() {
             }
             selectedCar.online = !selectedCar.online;
             $.ajax({
-                url: 'http://localhost:64411/api/car/' + selectedCar.id,
+                url: localStorage.getItem("carApiUrlForJavascript") + "api/car/" + selectedCar.id,
                 contentType: "application/json",
                 type: "PUT",
                 data: JSON.stringify(selectedCar),
