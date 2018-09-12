@@ -22,6 +22,7 @@ namespace CarApi
             {
                 c.SwaggerDoc("v1", new Info { Title = "CarApi", Version = "v1" });
             });
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAllOrigins",
