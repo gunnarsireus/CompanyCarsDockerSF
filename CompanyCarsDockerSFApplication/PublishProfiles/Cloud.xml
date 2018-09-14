@@ -20,8 +20,8 @@
                                     AzureActiveDirectory="true"
                                     ServerCertThumbprint="0123456789012345678901234567890123456789" />
   -->
-  <ClusterConnectionParameters ConnectionEndpoint="companycars.westeurope.cloudapp.azure.com:19000" X509Credential="true" ServerCertThumbprint="1EFD8F5119A25F598AD6922497D0C446DBBF411E" FindType="FindByThumbprint" FindValue="1EFD8F5119A25F598AD6922497D0C446DBBF411E" StoreLocation="CurrentUser" StoreName="My" />
+  <ClusterConnectionParameters ConnectionEndpoint="companycarsdocker.westeurope.cloudapp.azure.com:19000" X509Credential="true" ServerCertThumbprint="CBC7180C5221FA5D5DAF035339D07A4ACC5CCD15" FindType="FindByThumbprint" FindValue="CBC7180C5221FA5D5DAF035339D07A4ACC5CCD15" StoreLocation="CurrentUser" StoreName="My" />
   <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />
   <CopyPackageParameters CompressPackage="true" />
-  <ContainerRegistryParameters Server="companycarsdockerregistry.azurecr.io" RegistryName="companycarsdockerregistry" UserName="companycarsdockerregistry" />
+  <ContainerRegistryParameters RegistryName="companycarsdocker" UserName="companycarsdocker" Server="companycarsdocker.azurecr.io" />
 </PublishProfile>
