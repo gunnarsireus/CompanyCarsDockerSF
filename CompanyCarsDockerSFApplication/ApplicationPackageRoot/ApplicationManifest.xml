@@ -5,8 +5,8 @@
     <Parameter Name="CarApi_Isolation" DefaultValue="default" />
     <Parameter Name="CarClient_InstanceCount" DefaultValue="-1" />
     <Parameter Name="CarClient_Isolation" DefaultValue="default" />
-    <Parameter Name="CarClient_CarApiUrlReverseProxy" DefaultValue="https://localhost:19081/CompanyCarsDockerSFApplication/CarApi/" />
-    <Parameter Name="CarClient_CarApiUrlForJavascript" DefaultValue="http://companycarsdockersf.northeurope.cloudapp.azure.com:64411/" />
+    <Parameter Name="CarClient_CarApiUrlReverseProxy" DefaultValue="https://companycarsdocker.westeurope.cloudapp.azure.com:19081/CompanyCarsDockerSFApplication/CarApi/" />
+    <Parameter Name="CarClient_CarApiUrlForJavascript" DefaultValue="http://companycarsdocker.northeurope.cloudapp.azure.com:64411/" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
