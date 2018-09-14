@@ -3,6 +3,5 @@
 FROM microsoft/aspnetcore:2.0-nanoserver-sac2016
 ARG source
 WORKDIR /app
-EXPOSE 50416
 COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", "CarClient.dll"]
